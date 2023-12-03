@@ -21,8 +21,13 @@ class View(QWidget):
 		self.cb = QComboBox(self)	# 콤보 박스 추가
 		self.cb.addItems(['+', '-', '*', '/'])	# 콤보 박스 항목 추가(연산자로 사용)
 
-		self.btn1 = QPushButton('Message', self)
+		self.btn1 = QPushButton('Calc', self)	# 버튼 이름 변경
 		self.btn2 = QPushButton('Clear', self)
+
+		self.le1 = QLineEdit('0', self)
+		self.le1.setAlignment(QtCore.Qt.AlignRight)
+		self.le1.setFocus(True)	# 포커스 설정
+		self.le1.selectAll()	# 텍스트 전체 설정
 
 		hbox_formular = QHBoxLayout()	# 새로 정의한 위젯을 QHBoxLayout에 배치
 		hbox_formular.addWidget(self.le1)
@@ -47,7 +52,7 @@ class View(QWidget):
 		self.resize(256, 256)
 		self.show()
 
-	def activateMessage(self):
+	def setDisplay(self): # 메서드 이름 변경
 		self.te1.appendPlainText("Button clicked!")
 		
 	def clearMessage(self):
