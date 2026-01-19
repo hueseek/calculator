@@ -1,4 +1,4 @@
-# ch 5.2.1 ctrl.py
+# ch 7.1.3 ctrl.py
 class Control:
 
     def __init__(self, view):
@@ -20,5 +20,17 @@ class Control:
         self.view.btn1.clicked.connect(lambda:self.view.setDisplay(self.calculate())) # 버튼 1 연결을 변경
         self.view.btn2.clicked.connect(self.view.clearMessage)
 
-    def sum(self, a, b):    # 예외 처리 제거: 향후 calculate 함수에서 처리하도록 구현 예정
+    def sum(self, a, b):
         return a + b
+
+    def sub(self, a, b):
+        return a - b
+
+    def mul(self, a, b):
+        return a * b
+
+    def div(self, a, b):
+        return a / b
+
+    def pow(self, a, b):
+        return pow(a, b)
