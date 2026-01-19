@@ -18,7 +18,7 @@ class View(QWidget):
 
         self.le1 = QLineEdit('0', self)     # 라인 에디터1 추가
         self.le1.setAlignment(QtCore.Qt.AlignRight) # 라인 에디트1 문자열 배치 설정
-        self.le1.setFocus()     # 포커스 설정
+        self.le1.setFocus()         # 포커스 설정
         self.le1.selectAll()        # 텍스트 전체 설정
 
         self.le2 = QLineEdit('0', self)     # 라인 에디터2 추가
@@ -50,8 +50,8 @@ class View(QWidget):
         self.resize(256, 256)
         self.show()
 
-    def setDisplay(self):       # 메서드 이름 변경
-        self.te1.appendPlainText("Button clicked!")
+    def setDisplay(self, text):       # 함수명 변경
+        self.te1.appendPlainText(text)
 
     def clearMessage(self):
         self.te1.clear()
