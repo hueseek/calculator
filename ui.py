@@ -25,7 +25,8 @@ class View(QWidget):
         self.le2.setAlignment(QtCore.Qt.AlignRight) # 라인 에디트2 문자열 배치 설정
 
         self.cb = QComboBox(self)   # 콤보 박스 추가
-        self.cb.addItems(['+', '-', '*', '/', '^', '%'])  # 커듭제곱 연산자 추가
+        # self.cb.addItems(['+', '-', '*', '/', '^', '%'])  # 커듭제곱 연산자 추가
+        self.cb.addItems(['+', '-', '*', '/'])
 
         hbox_formular = QHBoxLayout()   # 새로 정의한 위젯을 QHBoxLayout에 배치
         hbox_formular.addWidget(self.le1)
