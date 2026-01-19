@@ -9,7 +9,7 @@ class Control:
         pass
 
     def connectSignals(self):
-        self.view.btn1.clicked.connect(self.view.calculate) # 버튼 1 연결을 변경
+        self.view.btn1.clicked.connect(self.view.setDisplay) # 버튼 1 연결을 변경
         self.view.btn2.clicked.connect(self.view.clearMessage)
 
     def sum(self, a, b):    # 예외 처리 기능 추가
